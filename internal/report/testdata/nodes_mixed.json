@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "metadata": { "name": "node-a" },
+      "status": {
+        "conditions": [
+          { "type": "MemoryPressure", "status": "False" },
+          { "type": "DiskPressure", "status": "False" },
+          { "type": "PIDPressure", "status": "False" },
+          { "type": "Ready", "status": "True" }
+        ],
+        "nodeInfo": { "kubeletVersion": "v1.30.3", "osImage": "k3s" }
+      }
+    },
+    {
+      "metadata": { "name": "node-b" },
+      "status": {
+        "conditions": [
+          { "type": "MemoryPressure", "status": "True" },
+          { "type": "DiskPressure", "status": "False" },
+          { "type": "PIDPressure", "status": "False" },
+          { "type": "Ready", "status": "True" }
+        ],
+        "nodeInfo": { "kubeletVersion": "v1.30.3", "osImage": "k3s" }
+      }
+    },
+    {
+      "metadata": { "name": "node-c" },
+      "status": {
+        "conditions": [
+          { "type": "Ready", "status": "False" }
+        ],
+        "nodeInfo": { "kubeletVersion": "v1.30.3", "osImage": "k3s" }
+      }
+    }
+  ]
+}

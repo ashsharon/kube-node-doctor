@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "metadata": { "name": "api-6f9d-abcde", "namespace": "default" },
+      "spec": { "nodeName": "node-a" },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          { "name": "api", "ready": true, "restartCount": 0, "state": { "running": {} } }
+        ]
+      }
+    },
+    {
+      "metadata": { "name": "worker-7c88-fghij", "namespace": "default" },
+      "spec": { "nodeName": "node-b" },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          { "name": "worker", "ready": false, "restartCount": 9, "state": { "waiting": { "reason": "CrashLoopBackOff" } } }
+        ]
+      }
+    },
+    {
+      "metadata": { "name": "migrator-abc12", "namespace": "data" },
+      "spec": { "nodeName": "" },
+      "status": {
+        "phase": "Pending",
+        "containerStatuses": []
+      }
+    },
+    {
+      "metadata": { "name": "cache-9988", "namespace": "default" },
+      "spec": { "nodeName": "node-a" },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          { "name": "cache", "ready": true, "restartCount": 1, "state": { "running": {} } }
+        ]
+      }
+    }
+  ]
+}
